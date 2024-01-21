@@ -60,5 +60,55 @@
     "key": "alt+j",
     "command": "editor.action.moveLinesDownAction",
     "when": "editorTextFocus && !editorReadonly"
+  },
+  {
+    "key": "alt+l alt+o",
+    "command": "-extension.liveServer.goOnline",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "alt+l alt+c",
+    "command": "-extension.liveServer.goOffline",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "alt+l",
+    "command": "-toggleSearchEditorContextLines",
+    "when": "inSearchEditor"
+  },
+  {
+    "key": "alt+l",
+    "command": "-toggleFindInSelection",
+    "when": "editorFocus"
+  },
+  {
+    "key": "alt+h",
+    "command": "-git.viewFileHistory"
+  },
+  {
+    "key": "alt+h",
+    "command": "-gitlens.showQuickFileHistory",
+    "when": "!gitlens:disabled && config.gitlens.keymap == 'alternate'"
+  },
+  {
+    "key": "alt+h",
+    "command": "-testing.toggleTestingPeekHistory",
+    "when": "testing.isPeekVisible"
+  },
+  {
+    "key": "alt+h",
+    "command": "workbench.action.focusLeftGroup"
+  },
+  {
+    "key": "ctrl+k ctrl+left",
+    "command": "-workbench.action.focusLeftGroup"
+  },
+  {
+    "key": "alt+l",
+    "command": "workbench.action.focusRightGroup"
+  },
+  {
+    "key": "ctrl+k ctrl+right",
+    "command": "-workbench.action.focusRightGroup"
   }
 ]
