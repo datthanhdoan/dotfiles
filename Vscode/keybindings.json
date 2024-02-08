@@ -1,20 +1,25 @@
 // Place your key bindings in this file to override the defaultsauto[]
+
 [
   {
+    "key": "ctrl+e",
+    "command": "workbench.view.explorer",
+    "when": "viewContainer.workbench.view.explorer.enabled || terminalFocus && terminalHasBeenCreated && terminalIsOpen && terminalSuggestWidgetVisible || terminalFocus && terminalIsOpen && terminalProcessSupported && terminalSuggestWidgetVisible"
+  },
+  // close tab
+  {
     "key": "ctrl+w",
-    "command": "-extension.vim_ctrl+w",
-    "when": "editorTextFocus && vim.active && vim.use<C-w> && !inDebugRepl"
+    "command": "workbench.action.closeActiveEditor"
+  },
+
+  // tab nav
+  {
+    "key": "ctrl+h",
+    "command": "workbench.action.focusLeftGroup"
   },
   {
-    "key": "ctrl+e",
-    "command": "workbench.view.explorer",
-    // i want focus on explorer when i press ctrl+e in file editor or terminal
-    "when": "viewContainer.workbench.view.explorer.enabled"
-  },
-  {
-    "key": "ctrl+e",
-    "command": "workbench.view.explorer",
-    "when": "terminalFocus"
+    "key": "ctrl+l",
+    "command": "workbench.action.focusRightGroup"
   },
 
   // Terminal
@@ -22,6 +27,16 @@
     "key": "alt+q",
     "command": "workbench.action.terminal.toggleTerminal",
     "when": "terminal.active"
+  },
+
+  // Resize
+  {
+    "key": "alt+=",
+    "command": "workbench.action.increaseViewSize"
+  },
+  {
+    "key": "alt+-",
+    "command": "workbench.action.decreaseViewSize"
   },
 
   // FILE TREE
@@ -50,6 +65,7 @@
     "command": "deleteFile",
     "when": "filesExplorerFocus && !inputFocus"
   },
+
   // Line
   {
     "key": "alt+k",
@@ -61,6 +77,8 @@
     "command": "editor.action.moveLinesDownAction",
     "when": "editorTextFocus && !editorReadonly"
   },
+
+  // Remove
   {
     "key": "alt+l alt+o",
     "command": "-extension.liveServer.goOnline",
@@ -77,9 +95,13 @@
     "when": "inSearchEditor"
   },
   {
-    "key": "alt+l",
-    "command": "-toggleFindInSelection",
-    "when": "editorFocus"
+    "key": "alt+h",
+    "command": "-gitlens.showQuickFileHistory",
+    "when": "!gitlens:disabled && config.gitlens.keymap == 'alternate'"
+  },
+  {
+    "key": "ctrl+k ctrl+right",
+    "command": "-workbench.action.focusRightGroup"
   },
   {
     "key": "alt+h",
@@ -87,17 +109,8 @@
   },
   {
     "key": "alt+h",
-    "command": "-gitlens.showQuickFileHistory",
-    "when": "!gitlens:disabled && config.gitlens.keymap == 'alternate'"
-  },
-  {
-    "key": "alt+h",
     "command": "-testing.toggleTestingPeekHistory",
     "when": "testing.isPeekVisible"
-  },
-  {
-    "key": "alt+h",
-    "command": "workbench.action.focusLeftGroup"
   },
   {
     "key": "ctrl+k ctrl+left",
@@ -105,10 +118,7 @@
   },
   {
     "key": "alt+l",
-    "command": "workbench.action.focusRightGroup"
-  },
-  {
-    "key": "ctrl+k ctrl+right",
-    "command": "-workbench.action.focusRightGroup"
+    "command": "-toggleFindInSelection",
+    "when": "editorFocus"
   }
 ]
