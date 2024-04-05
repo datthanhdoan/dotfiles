@@ -1,43 +1,42 @@
 {
-  "window.title": "${rootName}",
-  "workbench.layoutControl.type": "menu",
-  "workbench.layoutControl.enabled": false, // hide status bar
+  // UI
+  // "window.title": "${rootName}",
+  "window.title": " ",
   "window.commandCenter": false,
   "window.menuBarVisibility": "toggle",
 
-  "workbench.iconTheme": "vscode-icons",
-  "editor.formatOnSave": true,
+  // APC CUSTOMIZE UI
+  "apc.statusBar": {
+    "position": "editor-bottom"
+  },
+
+  "workbench.layoutControl.type": "menu",
+  "workbench.layoutControl.enabled": false, // hide status bar
+  "workbench.list.smoothScrolling": true, // smooth scroll for file explorer
+  "workbench.iconTheme": "symbols",
+
   "code-runner.saveFileBeforeRun": true,
   "code-runner.runInTerminal": true,
-  // "editor.fontFamily": "'Fira Ligatures NL Retina','IntoneMono Nerd Font Mono','JetBrainsMono Nerd Font','monospace'",
-  "editor.fontFamily": "'Fira Ligatures NL Retina','JetBrainsMono Nerd Font','monospace'",
-  "editor.fontSize": 15,
-  "editor.fontLigatures": true,
+  "terminal.integrated.stickyScroll.enabled": true,
+  "notebook.stickyScroll.enabled": true,
   "terminal.integrated.cursorStyle": "line",
   "terminal.integrated.cursorWidth": 2,
   "settingsSync.ignoredSettings": ["editor.formatOnSave"],
-
+  "editor.fontFamily": "'Fira Ligatures NL Retina','JetBrainsMono Nerd Font','monospace'",
+  "editor.fontSize": 15,
+  "editor.fontLigatures": true,
   "editor.renderWhitespace": "boundary", // render whitespace only on the boundaries
   "editor.minimap.enabled": false,
   "editor.smoothScrolling": true,
   "editor.cursorSmoothCaretAnimation": "on", // smooth caret animation (default: "solid")
-  "workbench.list.smoothScrolling": true, // smooth scroll for file explorer
-  "editor.cursorSurroundingLines": 5, // number of lines to keep above and below the cursor
-  "editor.cursorBlinking": "phase", // blinking cursor animation
+  "editor.cursorSurroundingLines": 5, // blinking cursor animation
+  "editor.scrollbar.verticalScrollbarSize": 8,
+  "editor.scrollbar.horizontalScrollbarSize": 8,
+  "editor.lineHeight": 1.5,
 
-  // APC
-  "apc.listRow": {
-    "lists": ["explorer-folders-view", "quick-input-list", "results"],
-    "height": 20
-  },
-  "apc.activityBar": {
-    "height": 20,
-    "position": "bottom",
-    "size": 40
-  },
-  "apc.header": {
-    "height": 30
-  },
+  "explorer.compactFolders": false,
+
+  "terminal.integrated.tabs.enabled": true,
 
   // TERM REGION ---------------------------------------------------------------
   "terminal.integrated.commandsToSkipShell": [
@@ -111,7 +110,8 @@
     "<C-c>": false,
     "<C-x>": false,
     "<C-d>": false,
-    "<C-p>": false
+    "<C-p>": false,
+    "<C-/>": false
   },
 
   // DART REGION
@@ -218,7 +218,7 @@
     "errorForeground": "#d95757",
     "descriptionForeground": "#565b66",
     "textBlockQuote.background": "#0f131a",
-    // "textLink.foreground": "#e6b450",
+    "textLink.foreground": "#e6b450",
     // "textLink.activeForeground": "#e6b450",
     "textPreformat.foreground": "#bfbdb6",
     "button.background": "#e6b450",
@@ -236,7 +236,7 @@
     "input.placeholderForeground": "#565b6680",
     "inputOption.activeBorder": "#e6b4504d",
     "inputOption.activeBackground": "#e6b45033",
-    // "inputOption.activeForeground": "#e6b450",
+    "inputOption.activeForeground": "#e6b450",
     "inputValidation.errorBackground": "#0d1017",
     "inputValidation.errorBorder": "#d95757",
     "inputValidation.infoBackground": "#0b0e14",
@@ -248,14 +248,14 @@
     "scrollbarSlider.hoverBackground": "#565b6699",
     "scrollbarSlider.activeBackground": "#565b66b3",
     "badge.background": "#e6b45033",
-    // "badge.foreground": "#e6b450",
-    // "progressBar.background": "#e6b450",
+    "badge.foreground": "#e6b450",
+    "progressBar.background": "#e6b450",
     "list.activeSelectionBackground": "#47526640",
     "list.activeSelectionForeground": "#bfbdb6",
     "list.focusBackground": "#47526640",
     "list.focusForeground": "#bfbdb6",
     "list.focusOutline": "#47526640",
-    // "list.highlightForeground": "#e6b450",
+    "list.highlightForeground": "#e6b450",
     "list.deemphasizedForeground": "#d95757",
     "list.hoverBackground": "#47526640",
     "list.inactiveSelectionBackground": "#47526633",
@@ -264,7 +264,7 @@
     "list.errorForeground": "#d95757",
     "tree.indentGuidesStroke": "#6c738080",
     "listFilterWidget.background": "#0f131a",
-    // "listFilterWidget.outline": "#e6b450",
+    "listFilterWidget.outline": "#e6b450",
     "listFilterWidget.noMatchesOutline": "#d95757",
     "list.filterMatchBackground": "#5f4c7266",
     "list.filterMatchBorder": "#6c598066",
@@ -272,7 +272,7 @@
     "activityBar.foreground": "#565b66cc",
     "activityBar.inactiveForeground": "#565b6699",
     "activityBar.border": "#0b0e14",
-    // "activityBar.activeBorder": "#e6b450b3",
+    "activityBar.activeBorder": "#e6b450",
     "activityBarBadge.background": "#e6b450",
     "activityBarBadge.foreground": "#0b0e14",
     "sideBar.background": "#0b0e14",
@@ -296,8 +296,9 @@
     "tab.activeBackground": "#0b0e14",
     "tab.activeForeground": "#bfbdb6",
     "tab.border": "#0b0e14",
-    // "tab.activeBorder": "#e6b450",
-    "tab.unfocusedActiveBorder": "#565b66",
+    "tab.activeBorder": "#ffffff00",
+    "tab.activeBorderTop": "#e6b450",
+    "tab.unfocusedActiveBorder": "#565b6600",
     "tab.inactiveBackground": "#0b0e14",
     "tab.inactiveForeground": "#565b66",
     "tab.unfocusedActiveForeground": "#565b66",
@@ -396,7 +397,7 @@
     "titleBar.border": "#0b0e14",
     "extensionButton.prominentForeground": "#0d1017",
     // "extensionButton.prominentBackground": "#e6b450",
-    "extensionButton.prominentHoverBackground": "#e1af4b",
+    // "extensionButton.prominentHoverBackground": "#e1af4b",
     "pickerGroup.border": "#11151c",
     "pickerGroup.foreground": "#565b6680",
     "debugToolBar.background": "#0f131a",
@@ -439,5 +440,14 @@
     "terminal.ansiBrightCyan": "#95e6cb",
     "terminal.ansiBrightWhite": "#ffffff"
   },
-  "workbench.statusBar.visible": false
+  "workbench.activityBar.location": "top",
+  "helium-icon-theme.hidesExplorerArrows": true,
+  "animations.Install-Method": "Apc Customize UI++",
+  "apc.imports": [
+    "file:///c:/Users/charlie/.vscode/extensions/brandonkirbyson.vscode-animations-2.0.1/dist/updateHandler.js"
+  ],
+  "symbols.hidesExplorerArrows": false,
+  "editor.lightbulb.enabled": "off",
+  "editor.occurrencesHighlight": "multiFile",
+  "animations.Scrolling": "None"
 }
