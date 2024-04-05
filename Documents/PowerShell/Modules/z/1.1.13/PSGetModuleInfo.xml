@@ -15,7 +15,7 @@
       <Nil N="Copyright" />
       <DT N="PublishedDate">2020-05-23T01:22:00+07:00</DT>
       <Obj N="InstalledDate" RefId="1">
-        <DT>2023-08-19T14:28:14.2725306+07:00</DT>
+        <DT>2024-01-17T23:45:21.0143331+07:00</DT>
         <MS>
           <Obj N="DisplayHint" RefId="2">
             <TN RefId="1">
@@ -55,8 +55,19 @@
         </TN>
         <DCT>
           <En>
-            <S N="Key">Function</S>
+            <S N="Key">Cmdlet</S>
             <Obj N="Value" RefId="5">
+              <TNRef RefId="2" />
+              <LST />
+            </Obj>
+          </En>
+          <En>
+            <S N="Key">RoleCapability</S>
+            <Ref N="Value" RefId="5" />
+          </En>
+          <En>
+            <S N="Key">Function</S>
+            <Obj N="Value" RefId="6">
               <TNRef RefId="2" />
               <LST>
                 <S>z</S>
@@ -65,25 +76,6 @@
                 <S>pushdX</S>
               </LST>
             </Obj>
-          </En>
-          <En>
-            <S N="Key">Workflow</S>
-            <Obj N="Value" RefId="6">
-              <TNRef RefId="2" />
-              <LST />
-            </Obj>
-          </En>
-          <En>
-            <S N="Key">DscResource</S>
-            <Ref N="Value" RefId="6" />
-          </En>
-          <En>
-            <S N="Key">Cmdlet</S>
-            <Ref N="Value" RefId="6" />
-          </En>
-          <En>
-            <S N="Key">RoleCapability</S>
-            <Ref N="Value" RefId="6" />
           </En>
           <En>
             <S N="Key">Command</S>
@@ -96,6 +88,14 @@
                 <S>pushdX</S>
               </LST>
             </Obj>
+          </En>
+          <En>
+            <S N="Key">Workflow</S>
+            <Ref N="Value" RefId="5" />
+          </En>
+          <En>
+            <S N="Key">DscResource</S>
+            <Ref N="Value" RefId="5" />
           </En>
         </DCT>
       </Obj>
@@ -119,15 +119,15 @@
           <S N="releaseNotes">Allow z to work with hidden .cdHistory file.</S>
           <S N="isLatestVersion">True</S>
           <S N="isAbsoluteLatestVersion">True</S>
-          <S N="versionDownloadCount">51252</S>
-          <S N="downloadCount">60967</S>
+          <S N="versionDownloadCount">62227</S>
+          <S N="downloadCount">72149</S>
           <S N="packageSize">291183</S>
-          <S N="published">5/23/2020 1:22:00 AM +07:00</S>
-          <S N="created">5/23/2020 1:22:00 AM +07:00</S>
-          <S N="lastUpdated">8/19/2023 6:50:17 AM +07:00</S>
+          <S N="published">23-May-20 1:22:00 AM +07:00</S>
+          <S N="created">23-May-20 1:22:00 AM +07:00</S>
+          <S N="lastUpdated">17-Jan-24 4:42:27 PM +07:00</S>
           <S N="tags">z directory popd pushd jump PSModule PSFunction_z PSCommand_z PSFunction_cdX PSCommand_cdX PSFunction_popdX PSCommand_popdX PSFunction_pushdX PSCommand_pushdX PSIncludes_Function</S>
           <S N="developmentDependency">False</S>
-          <S N="updated">2023-08-19T06:50:17Z</S>
+          <S N="updated">2024-01-17T16:42:27Z</S>
           <S N="NormalizedVersion">1.1.13</S>
           <S N="Authors">Vince Panuccio</S>
           <S N="IsPrerelease">false</S>
@@ -137,7 +137,7 @@
           <S N="PowerShellVersion">3.0</S>
         </MS>
       </Obj>
-      <S N="InstalledLocation">C:\Users\doant\OneDrive\Tài liệu\PowerShell\Modules\z\1.1.13</S>
+      <S N="InstalledLocation">D:\home\Documents\PowerShell\Modules\z\1.1.13</S>
     </MS>
   </Obj>
 </Objs>
